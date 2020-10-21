@@ -23,5 +23,19 @@ genera.addEventListener('click',
      // biglietto sconto 40% over 65
      sconto = ticket * 0.4;
   }
-   costobiglietto.innerHTML = (ticket - sconto).toFixed(2);
+   costobiglietto.innerHTML = (ticket - sconto).toFixed(2) + " $";
+   offerta.innerHTML = fascia.value;
+   carrozza.innerHTML = Math.floor(Math.random() * 15) + 1;
+   codecp.innerHTML = Math.floor(Math.random() * 10000) + 90000;
+   var bigliettoutput = document.getElementById('bigliettoutput');
+   bigliettoutput.style.display = "block";
 });
+
+// aggiunte impostazioni pulsante annulla per resettare info biglietto
+annulla.addEventListener('click',
+function() {
+  nome.value = '';
+  km.value = '';
+  fascia.value = '';
+  bigliettoutput.style.display = "";
+})
