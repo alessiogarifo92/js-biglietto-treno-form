@@ -13,7 +13,7 @@ var codcp = document.getElementById('codecp');
 var costobiglietto = document.getElementById('costobiglietto');
 
 // biglietto adulto
-costobiglietto = parseInt(km.value * 0.21);
+// costobiglietto = parseInt(km.value * 0.21);
 
 // biglietto sconto 20% minori 18
 if ( minorenne === "minore 18 anni" ){
@@ -26,10 +26,12 @@ if ( minorenne === "minore 18 anni" ){
 genera.addEventListener('click',
  function() {
    passeggero.innerHTML = nome.value;
-   costobiglietto.innerHTML = (if ( minorenne === "minore 18 anni" ){
-     costobiglietto = costobiglietto - ((costobiglietto / 100)* 20).toFixed(2);
+   // costo biglietto adulto
+   costobiglietto.innerHTML = (km.value * 0.21);
+   if ( minorenne === "minore 18 anni" ){
+     costobiglietto.innerHTML = (km.value * 0.21) - (((km.value * 0.21) / 100)* 20).toFixed(2);
    } else if (over === "over 65 anni") {
      // biglietto sconto 40% over 65
      costobiglietto = costobiglietto - ((costobiglietto / 100)* 40).toFixed(2);
-   })
+   }
 });
