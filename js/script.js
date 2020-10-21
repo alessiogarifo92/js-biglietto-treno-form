@@ -1,12 +1,29 @@
-// km da percorrere
+// assegno ad ogni variabile il proprio id in html
+var nome = document.getElementById('nome');
 var km = document.getElementById('km');
-// fascia età passegero
 var minorenne = document.getElementById('minorenne');
 var adulto = document.getElementById('adulto');
-var over65 = document.getElementById('over65');
-// costo biglietto intero
-var price = 0.21 * km;
+var over = document.getElementById('over');
+var genera = document.getElementById('genera');
+var annulla = document.getElementById('annulla');
+var passeggero = document.getElementById('passegero');
+var offerta = document.getElementById('offerta');
+var carrozza = document.getElementById('carrozza');
+var codcp = document.getElementById('codecp');
+var costobiglietto = document.getElementById('costobiglietto');
 
-// costo biglietto minori di 18 anni
+// biglietto adulto
+costobiglietto = parseInt(km * 0.21);
 
-// costo biglietto over 65 anni
+// biglietto sconto 20% minori 18
+if (minorenne === minore 18 anni){
+  costobiglietto = costobiglietto - ((costobiglietto / 100)* 20).toFixed(2);
+} else if (over === over 65 anni) {
+  // biglietto sconto 40% over 65
+  costobiglietto = costobiglietto - ((costobiglietto / 100)* 40).toFixed(2);
+}
+
+genera.addEventListener('click',
+ function() {
+   passegero.innerHTML = nome.value;
+});
