@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container{
+  background-color: red;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+#insdati{
+  background-color: white;
+  width: 60%;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+#insdati > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 33%;
+  margin-bottom: 20px;
+}
+
+input, select{
+  padding: 10px;
+  text-align: center;
+}
+
+button{
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+#bigliettoutput{
+  background-color: white;
+  min-height: 100px;
+  width: 60%;
+  padding: 15px;
+  color: black;
+}
+
+#infobiglietto{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding-right: 15px;
+}
+
+#grigio{
+  background-color: grey;
+  height: 100px;
+  padding: 0 20px;
+}
